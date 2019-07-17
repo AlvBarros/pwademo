@@ -1,0 +1,64 @@
+input.rounded {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    width: 100%;
+}
+
+div.chat-box {
+    height: 75vh;
+    background-color: #424242;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+div.mensagens-box {
+    height: 90%;
+    overflow: scroll;
+}
+
+div#mensagens-box div.mensagem {
+    background-color: #2b2b2b;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+div.mensagem span.autor {
+    font-weight: bold;
+}
+div.mensagem span.texto {
+    
+}
+
+div.mensagens-input {
+    height: 10%;
+}
+div.mensagens-input div.texto {
+    height: 100%;
+    width: 80%;
+    float: left;
+}
+div.mensagens-input div.enviar {
+    height: 100%;
+    width: 20%;
+    float: left;
+}

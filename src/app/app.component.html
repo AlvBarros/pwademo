@@ -1,19 +1,33 @@
 <mat-toolbar  color="primary">
   <mat-toolbar-row>
-    <span>JS-jargon</span>
+    <span>Chat Application</span>
   </mat-toolbar-row>
 </mat-toolbar>
 <main>
-  <mat-card *ngFor="let item of items">
-    <mat-card-header>
-      <mat-card-title>{{item.name}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      {{item.description}}  
-    </mat-card-content>
-    <mat-card-actions>
-      <a  mat-raised-button  href="{{item.url}}"  color="primary">More</a>
-    </mat-card-actions>
+  <mat-card *ngIf="nameSet==0">
+      <span style="margin-right: 10px"> Seu nome será... </span>
+      <mat-form-field class="example-full-width">
+        <input matInput [(ngModel)]='name'>
+      </mat-form-field>
+      <button mat-button class="center" (click)="entrar()">Entrar</button>
   </mat-card>
+  <div *ngIf="nameSet==1" class="chat-box">
+    <div class="mensagens-box" id="mensagens-box">
+      <div *ngFor="let msg of messages">
+          <div class="mensagem">
+              <span class="autor">{{ msg.autor }} :</span>
+              <span class="texto"> {{ msg.texto }} </span>
+            </div>
+          </div>
+    </div>
+    <div class="mensagens-input">
+      <div class="texto">
+        <input class="rounded" [(ngModel)]='texto'>
+      </div>
+      <div class="enviar">
+        <button mat-button (click)='sendMessage()' style="width: 100%;">Enviar</button>
+      </div>
+    </div>
+  </div>
 </main>
   
