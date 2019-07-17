@@ -11,7 +11,7 @@ export class AppComponent {
   public nameSet:number;
   public texto:string;
   public messages:any[];
-  public dataURL: string = "ws://localhost:3000";
+  public dataURL: string = "ws://alvbarroscloud.mybluemix.net";
   public connection: WebSocket;
   constructor() { 
     this.connection = new WebSocket(this.dataURL);
